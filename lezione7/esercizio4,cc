@@ -1,0 +1,42 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+
+
+double distanza (const double x, const double y, 
+                const double xc, const double yc) {
+    return sqrt(pow(x-xc,2)+pow(y-yc,2));
+}
+
+void check_circle (const double x, const double y, 
+                    const double xc, const double yc, 
+                    const double r, bool status) {
+    const double d = distanza(x, y, xc, yc);
+    if (d <= r) {
+        cout << "true" << endl;
+    } else {
+        cout << "false" << endl;
+    }
+                    }
+
+int main () {
+    const double xc=1, yc=1 r=1;
+    double x, y;
+    bool status;
+    
+    cout << "Abbiamo un cerchio di centro c=(1,1) e raggio r=1. 
+            Stabilire se i punti sono all'interno o all'esterno del cerchio." << endl;
+
+    for (int i=0; i<n; i++) {
+        cout << "Introdurre coordinate del punto ( x, y ): " << endl;
+        cin >> x >> y;
+       
+        if (d <= r) {
+        cout << "Il punto è dentro al cerchio" << endl;
+    } else {
+        cout << "Il punto è fuori dal cerchio" << endl;
+    }
+    }
+    return 0;
+}
